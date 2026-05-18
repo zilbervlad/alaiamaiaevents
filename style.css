@@ -1878,3 +1878,304 @@ textarea {
 .instagram-button:hover {
   transform: translateY(-1px);
 }
+
+/* =========================================
+   MOBILE POLISH — ALAIA MAIA EVENTS
+   Put last so it overrides desktop styles
+   ========================================= */
+
+@media (max-width: 760px) {
+  body {
+    overflow-x: hidden;
+  }
+
+  .site-header {
+    width: calc(100% - 24px);
+    margin: 12px auto 0;
+    padding: 12px 14px;
+    border-radius: 22px;
+    top: 10px;
+    align-items: center;
+  }
+
+  .logo {
+    gap: 9px;
+    font-size: 0.95rem;
+  }
+
+  .logo-mark {
+    width: 38px;
+    height: 38px;
+    font-size: 0.78rem;
+  }
+
+  .nav {
+    display: none;
+  }
+
+  .hero {
+    width: calc(100% - 24px);
+    margin-top: 22px;
+    border-radius: 30px;
+    grid-template-columns: 1fr;
+    min-height: auto;
+    background-position: center;
+  }
+
+  .hero-content {
+    padding: 48px 24px 26px;
+  }
+
+  .hero h1 {
+    font-size: clamp(3rem, 15vw, 4.4rem);
+    line-height: 0.9;
+    letter-spacing: -0.065em;
+  }
+
+  .hero-text {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-top: 22px;
+  }
+
+  .hero-actions {
+    margin-top: 26px;
+    gap: 10px;
+  }
+
+  .hero-actions .button {
+    width: 100%;
+  }
+
+  .hero-card {
+    padding: 0 18px 18px;
+  }
+
+  .hero-card-inner {
+    border-radius: 24px;
+    padding: 24px;
+  }
+
+  .section {
+    width: calc(100% - 24px);
+    margin-top: 58px;
+  }
+
+  .intro h2,
+  .section-heading h2,
+  .contact-content h2 {
+    font-size: clamp(2.35rem, 11vw, 3.4rem);
+    line-height: 0.96;
+  }
+
+  .intro p,
+  .section-heading p {
+    font-size: 1rem;
+    line-height: 1.7;
+  }
+
+  .section-heading {
+    grid-template-columns: 1fr;
+    gap: 14px;
+    margin-bottom: 22px;
+  }
+
+  .service-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .service-card {
+    border-radius: 24px;
+    padding: 24px;
+    min-height: auto;
+  }
+
+  .service-card h3 {
+    font-size: 1.45rem;
+  }
+
+  .gallery-grid {
+    grid-template-columns: 1fr;
+    gap: 14px;
+  }
+
+  .gallery-tile,
+  .gallery-tile.large {
+    min-height: 210px;
+    border-radius: 24px;
+  }
+
+  .testimonial-card {
+    padding: 34px 22px;
+    border-radius: 26px;
+  }
+
+  .quote {
+    font-size: clamp(1.65rem, 8vw, 2.4rem);
+  }
+
+  .site-footer {
+    width: calc(100% - 24px);
+    margin-bottom: 20px;
+    padding: 22px 0 0;
+    flex-direction: column;
+  }
+
+  .footer-links {
+    gap: 14px;
+    flex-wrap: wrap;
+  }
+
+  /* Contact / Quote page mobile */
+  .quote-page .site-header {
+    margin-top: 12px;
+  }
+
+  .quote-intro {
+    width: calc(100% - 28px);
+    margin: 40px auto 26px;
+    text-align: left;
+  }
+
+  .quote-intro h1 {
+    font-size: clamp(3rem, 14vw, 4.4rem);
+    line-height: 0.9;
+    letter-spacing: -0.07em;
+  }
+
+  .quote-intro p {
+    font-size: 1rem;
+    line-height: 1.65;
+    margin-top: 18px;
+  }
+
+  .quote-shell {
+    width: calc(100% - 24px);
+    grid-template-columns: 1fr;
+    gap: 18px;
+    margin-bottom: 58px;
+  }
+
+  .quote-form-luxe {
+    order: 1;
+    padding: 28px 18px;
+    border-radius: 24px;
+    gap: 12px;
+  }
+
+  .quote-left {
+    order: 2;
+    gap: 16px;
+  }
+
+  .quote-form-luxe h2 {
+    font-size: clamp(2.55rem, 13vw, 3.4rem);
+    line-height: 0.92;
+    margin-bottom: 18px;
+  }
+
+  .quote-form-section {
+    font-size: 0.72rem;
+    letter-spacing: 0.16em;
+    margin-top: 16px;
+  }
+
+  .quote-grid-2 {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+
+  .quote-form-luxe input,
+  .quote-form-luxe select,
+  .quote-form-luxe textarea {
+    min-height: 52px;
+    border-radius: 14px;
+    padding: 15px 16px;
+    font-size: 1rem;
+  }
+
+  .quote-services-grid {
+    grid-template-columns: 1fr;
+    gap: 12px;
+    margin-top: 6px;
+  }
+
+  .quote-services-grid label {
+    padding: 12px 13px;
+    border-radius: 14px;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .quote-submit-btn {
+    min-height: 58px;
+    border-radius: 16px;
+    margin-top: 14px;
+  }
+
+  .quote-contact-card,
+  .quote-style-card {
+    border-radius: 24px;
+  }
+
+  .quote-contact-card {
+    padding: 26px 22px;
+  }
+
+  .quote-contact-card h2 {
+    font-size: 1.9rem;
+  }
+
+  .quote-style-card {
+    min-height: 280px;
+    padding: 26px 22px;
+  }
+
+  .quote-style-card h2 {
+    font-size: 2rem;
+  }
+
+  .instagram-section {
+    width: calc(100% - 24px);
+    margin-bottom: 58px;
+  }
+
+  .instagram-inner {
+    padding: 34px 22px;
+    border-radius: 26px;
+    text-align: left;
+  }
+
+  .instagram-inner h2 {
+    font-size: clamp(2.2rem, 11vw, 3.2rem);
+  }
+
+  .instagram-inner p {
+    margin-left: 0;
+    margin-right: 0;
+  }
+
+  .instagram-button {
+    width: 100%;
+    margin-top: 24px;
+  }
+}
+
+@media (max-width: 420px) {
+  .hero h1,
+  .quote-intro h1 {
+    font-size: 3.15rem;
+  }
+
+  .button,
+  .instagram-button {
+    min-height: 52px;
+  }
+
+  .service-card,
+  .hero-card-inner,
+  .quote-contact-card,
+  .quote-style-card {
+    padding: 22px 18px;
+  }
+}
