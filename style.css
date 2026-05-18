@@ -1859,3 +1859,22 @@ textarea {
     min-height: 520px;
   }
 }
+
+.instagram-button {
+  margin-top: 28px;
+  min-height: 54px;
+  padding: 0 28px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 999px;
+  background: #2f2928;
+  color: #fffaf4;
+  font-family: Arial, Helvetica, sans-serif;
+  font-weight: 800;
+  box-shadow: 0 16px 34px rgba(47, 41, 40, 0.16);
+}
+
+.instagram-button:hover {
+  transform: translateY(-1px);
+}
