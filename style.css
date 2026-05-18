@@ -2456,3 +2456,64 @@ textarea {
     height: 220px !important;
   }
 }
+
+/* Show Gallery + Get a Quote on mobile */
+@media (max-width: 760px) {
+  .site-header {
+    gap: 10px;
+  }
+
+  .nav {
+    display: flex !important;
+    align-items: center;
+    gap: 10px !important;
+  }
+
+  .nav a {
+    display: none;
+  }
+
+  .nav a[href="gallery.html"],
+  .nav a.nav-button {
+    display: inline-flex !important;
+    align-items: center;
+    justify-content: center;
+    white-space: nowrap;
+  }
+
+  .nav a[href="gallery.html"] {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 0.86rem;
+    font-weight: 700;
+    color: #2f2928;
+  }
+
+  .nav-button {
+    min-height: 40px;
+    padding: 0 13px;
+    font-size: 0.82rem;
+  }
+
+  .logo span:last-child {
+    max-width: 125px;
+  }
+}
+
+@media (max-width: 390px) {
+  .nav {
+    gap: 7px !important;
+  }
+
+  .nav a[href="gallery.html"] {
+    font-size: 0.8rem;
+  }
+
+  .nav-button {
+    padding: 0 10px;
+    font-size: 0.78rem;
+  }
+
+  .logo span:last-child {
+    max-width: 105px;
+  }
+}
