@@ -2179,3 +2179,50 @@ textarea {
     padding: 22px 18px;
   }
 }
+
+/* Keep Get a Quote visible on mobile */
+@media (max-width: 760px) {
+  .site-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .nav {
+    display: flex !important;
+    gap: 0;
+  }
+
+  .nav a:not(.nav-button) {
+    display: none;
+  }
+
+  .nav-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 42px;
+    padding: 0 15px;
+    border-radius: 999px;
+    font-size: 0.86rem;
+    white-space: nowrap;
+  }
+
+  .logo span:last-child {
+    max-width: 150px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+  }
+}
+
+@media (max-width: 390px) {
+  .logo span:last-child {
+    max-width: 118px;
+  }
+
+  .nav-button {
+    padding: 0 12px;
+    font-size: 0.82rem;
+  }
+}
