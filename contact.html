@@ -30,45 +30,55 @@
   </header>
 
   <main>
-    <section class="quote-top">
+    <section class="quote-intro">
       <p class="eyebrow">Request a Quote</p>
       <h1>Let’s create something beautiful.</h1>
       <p>
         Tell us about your event, your vision, and the details you already know.
-        We’ll review your inquiry and follow up soon.
+        We’ll review your inquiry and follow up with next steps.
       </p>
     </section>
 
-    <section class="luxury-quote-wrap">
-      <aside class="luxury-contact-card">
-        <h2>Contact</h2>
-
-        <div class="luxury-contact-item">
-          <span>Email</span>
-          <strong>alaiamaiaevents@gmail.com</strong>
+    <section class="quote-shell">
+      <aside class="quote-left">
+        <div class="quote-photo-card">
+          <img
+            src="https://images.unsplash.com/photo-1524504388940-b1c1722653e1?auto=format&fit=crop&w=900&q=80"
+            alt="Elegant event planning portrait"
+          />
         </div>
 
-        <div class="luxury-contact-item">
-          <span>Serving</span>
-          <strong>Massachusetts, New Hampshire & surrounding areas</strong>
-        </div>
+        <div class="quote-contact-card">
+          <h2>Contact Information</h2>
 
-        <div class="luxury-contact-item">
-          <span>Office Hours</span>
-          <strong>
-            Monday–Friday: 9am–6pm<br />
-            Saturday: 10am–4pm<br />
-            Sunday: By appointment
-          </strong>
-        </div>
+          <div class="quote-contact-item">
+            <span>Email</span>
+            <strong>alaiamaiaevents@gmail.com</strong>
+          </div>
 
-        <p class="luxury-contact-note">
-          Have inspiration photos? After submitting your inquiry, email them to us so we can better understand your style, colors, venue, and vision.
-        </p>
+          <div class="quote-contact-item">
+            <span>Serving</span>
+            <strong>Massachusetts, New Hampshire & surrounding areas</strong>
+          </div>
+
+          <div class="quote-contact-item">
+            <span>Office Hours</span>
+            <strong>
+              Monday – Friday: 9am – 6pm<br />
+              Saturday: 10am – 4pm<br />
+              Sunday: By appointment
+            </strong>
+          </div>
+
+          <p class="quote-contact-note">
+            Have inspiration photos? After submitting your inquiry, send them by email so we can
+            better understand your colors, theme, and vision.
+          </p>
+        </div>
       </aside>
 
       <form
-        class="luxury-quote-form"
+        class="quote-form-luxe"
         action="https://formspree.io/f/xnjrqdwk"
         method="POST"
       >
@@ -76,11 +86,11 @@
 
         <h2>Quote Request Form</h2>
 
-        <div class="luxury-form-section">Client Information</div>
+        <div class="quote-form-section">Client Information</div>
 
         <input type="text" name="name" placeholder="Full Name*" required />
 
-        <div class="luxury-form-row">
+        <div class="quote-grid-2">
           <input type="email" name="email" placeholder="Email Address*" required />
           <input type="tel" name="phone" placeholder="Phone Number*" required />
         </div>
@@ -91,9 +101,9 @@
           placeholder="How can we help you?"
         ></textarea>
 
-        <div class="luxury-form-section">Event Details</div>
+        <div class="quote-form-section">Event Details</div>
 
-        <div class="luxury-form-row">
+        <div class="quote-grid-2">
           <select name="event_type" required>
             <option value="">Select Event Type*</option>
             <option>Baby Shower</option>
@@ -109,13 +119,18 @@
           <input type="text" name="event_date" placeholder="Event Date*" required />
         </div>
 
-        <div class="luxury-form-row">
+        <div class="quote-grid-2">
           <input type="text" name="event_time" placeholder="Event Time" />
           <input type="text" name="setup_time" placeholder="Setup Time Available" />
         </div>
 
-        <div class="luxury-form-row">
-          <input type="text" name="event_location" placeholder="Event Location: venue name and address*" required />
+        <div class="quote-grid-2">
+          <input
+            type="text"
+            name="event_location"
+            placeholder="Event Location: venue name and address*"
+            required
+          />
 
           <select name="indoor_outdoor">
             <option value="">Indoor or Outdoor</option>
@@ -126,7 +141,7 @@
           </select>
         </div>
 
-        <div class="luxury-form-row">
+        <div class="quote-grid-2">
           <select name="guest_count">
             <option value="">Estimated Guest Count</option>
             <option>Under 25</option>
@@ -140,17 +155,13 @@
           <input type="text" name="access_notes" placeholder="Floor / Access Notes" />
         </div>
 
-        <div class="luxury-form-section">Design Details</div>
+        <div class="quote-form-section">Design Details</div>
 
-        <input
-          type="text"
-          name="theme_colors"
-          placeholder="Theme or Color Palette"
-        />
+        <input type="text" name="theme_colors" placeholder="Theme or Color Palette" />
 
-        <div class="luxury-form-section">Services Needed</div>
+        <div class="quote-form-section">Services Needed</div>
 
-        <div class="luxury-checkbox-grid">
+        <div class="quote-services-grid">
           <label><input type="checkbox" name="services_needed" value="Full Event Styling" /> Full Event Styling</label>
           <label><input type="checkbox" name="services_needed" value="Balloon Installations" /> Balloon Installations</label>
           <label><input type="checkbox" name="services_needed" value="Backdrops" /> Backdrops</label>
@@ -159,7 +170,7 @@
           <label><input type="checkbox" name="services_needed" value="Day-of Setup" /> Day-of Setup</label>
         </div>
 
-        <div class="luxury-form-section">Budget & Notes</div>
+        <div class="quote-form-section">Budget & Notes</div>
 
         <select name="budget_range">
           <option value="">Select Estimated Budget Range</option>
@@ -174,13 +185,13 @@
         <textarea
           name="message"
           rows="7"
-          placeholder="Additional details. Tell us more about your vision, specific requests, colors, venue details, or questions..."
+          placeholder="Additional details. Tell us more about your vision, colors, inspiration, venue details, or any special requests..."
           required
         ></textarea>
 
-        <button type="submit" class="luxury-submit-btn">Request a Quote</button>
+        <button type="submit" class="quote-submit-btn">Request a Quote</button>
 
-        <p class="luxury-form-note">
+        <p class="quote-form-note">
           We’ll review your inquiry and follow up soon at the email or phone number provided.
         </p>
       </form>
