@@ -1,0 +1,275 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Request a Quote | Alaia Maia Events</title>
+
+  <meta
+    name="description"
+    content="Request a quote from Alaia Maia Events for event styling, custom balloons, backdrops, showers, birthdays, weddings, and private celebrations."
+  />
+
+  <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+  <header class="site-header">
+    <a href="index.html" class="logo">
+      <span class="logo-mark">AM</span>
+      <span>Alaia Maia Events</span>
+    </a>
+
+    <nav class="nav">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#packages">Packages</a>
+      <a href="index.html#gallery">Gallery</a>
+      <a href="contact.html" class="nav-button">Get a Quote</a>
+    </nav>
+  </header>
+
+  <main>
+    <section class="contact-hero">
+      <div>
+        <p class="eyebrow">Request a Quote</p>
+        <h1>Let’s start planning something beautiful.</h1>
+        <p>
+          Tell us about your event, your vision, and the details you already know. We’ll review your inquiry
+          and follow up to talk through styling, balloons, setup, timing, and next steps.
+        </p>
+      </div>
+
+      <div class="contact-hero-card">
+        <p class="card-label">Alaia Maia Events</p>
+        <h2>Event styling, balloons & celebration design</h2>
+        <p>
+          Serving Massachusetts, New Hampshire, and surrounding areas.
+        </p>
+      </div>
+    </section>
+
+    <section class="quote-layout">
+      <aside class="quote-sidebar">
+        <div class="quote-side-card">
+          <h2>Contact Information</h2>
+
+          <div class="contact-detail">
+            <span>Email</span>
+            <strong>alaiamaiaevents@gmail.com</strong>
+          </div>
+
+          <div class="contact-detail">
+            <span>Serving</span>
+            <strong>Massachusetts, New Hampshire & surrounding areas</strong>
+          </div>
+
+          <div class="contact-detail">
+            <span>Office Hours</span>
+            <strong>
+              Monday–Friday: 9am–6pm<br />
+              Saturday: 10am–4pm<br />
+              Sunday: By appointment
+            </strong>
+          </div>
+        </div>
+
+        <div class="quote-side-card soft">
+          <h3>Have inspiration photos?</h3>
+          <p>
+            After submitting your inquiry, you can email or message inspiration photos, color palettes,
+            venue photos, or anything else that helps us understand the look you want.
+          </p>
+        </div>
+      </aside>
+
+      <form
+        class="quote-form"
+        action="https://formspree.io/f/xnjrqdwk"
+        method="POST"
+      >
+        <input type="hidden" name="_subject" value="New Alaia Maia Events Inquiry" />
+
+        <div class="form-intro">
+          <p class="section-label">Inquiry Form</p>
+          <h2>Event Details</h2>
+          <p>Fields marked with * are required.</p>
+        </div>
+
+        <div class="form-section-title">Client Information</div>
+
+        <div class="form-two-col">
+          <label>
+            Full Name *
+            <input type="text" name="name" placeholder="Your full name" required />
+          </label>
+
+          <label>
+            Phone Number *
+            <input type="tel" name="phone" placeholder="Best phone number" required />
+          </label>
+        </div>
+
+        <label>
+          Email Address *
+          <input type="email" name="email" placeholder="you@example.com" required />
+        </label>
+
+        <label>
+          How can we help you? *
+          <select name="inquiry_type" required>
+            <option value="">Select one</option>
+            <option>I'd like a quote</option>
+            <option>I have a general question</option>
+            <option>I need help choosing services</option>
+            <option>I want full event styling</option>
+          </select>
+        </label>
+
+        <div class="form-section-title">Event Information</div>
+
+        <div class="form-two-col">
+          <label>
+            Event Type *
+            <select name="event_type" required>
+              <option value="">Select event type</option>
+              <option>Baby Shower</option>
+              <option>Birthday</option>
+              <option>Bridal Shower</option>
+              <option>Wedding / Engagement</option>
+              <option>Corporate / Private Event</option>
+              <option>Graduation</option>
+              <option>Anniversary</option>
+              <option>Other</option>
+            </select>
+          </label>
+
+          <label>
+            Estimated Guest Count
+            <select name="guest_count">
+              <option value="">Select guest count</option>
+              <option>Under 25</option>
+              <option>25–50</option>
+              <option>50–100</option>
+              <option>100–150</option>
+              <option>150+</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+        </div>
+
+        <div class="form-two-col">
+          <label>
+            Event Date *
+            <input type="text" name="event_date" placeholder="Month / day / year" required />
+          </label>
+
+          <label>
+            Event Time
+            <input type="text" name="event_time" placeholder="Start time or approximate time" />
+          </label>
+        </div>
+
+        <label>
+          Event Location / Venue *
+          <input type="text" name="event_location" placeholder="Venue name, city, or home address" required />
+        </label>
+
+        <div class="form-two-col">
+          <label>
+            Indoor or Outdoor?
+            <select name="indoor_outdoor">
+              <option value="">Select one</option>
+              <option>Indoor</option>
+              <option>Outdoor</option>
+              <option>Both indoor and outdoor</option>
+              <option>Not sure yet</option>
+            </select>
+          </label>
+
+          <label>
+            Setup Time Available
+            <input type="text" name="setup_time" placeholder="When can setup begin?" />
+          </label>
+        </div>
+
+        <label>
+          Access Notes
+          <textarea
+            name="access_notes"
+            rows="3"
+            placeholder="Parking, elevator/stairs, venue rules, loading area, floor level, or anything we should know."
+          ></textarea>
+        </label>
+
+        <div class="form-section-title">Design Details</div>
+
+        <label>
+          Services Needed *
+          <div class="checkbox-grid">
+            <label><input type="checkbox" name="services_needed" value="Custom Balloons" /> Custom Balloons</label>
+            <label><input type="checkbox" name="services_needed" value="Backdrop / Photo Area" /> Backdrop / Photo Area</label>
+            <label><input type="checkbox" name="services_needed" value="Dessert Table Styling" /> Dessert Table Styling</label>
+            <label><input type="checkbox" name="services_needed" value="Tablescape / Decor Styling" /> Tablescape / Decor Styling</label>
+            <label><input type="checkbox" name="services_needed" value="Full Event Styling" /> Full Event Styling</label>
+            <label><input type="checkbox" name="services_needed" value="Day-of Setup" /> Day-of Setup</label>
+            <label><input type="checkbox" name="services_needed" value="Vendor Coordination" /> Vendor Coordination</label>
+            <label><input type="checkbox" name="services_needed" value="Not sure yet" /> Not sure yet</label>
+          </div>
+        </label>
+
+        <label>
+          Theme or Color Palette
+          <input
+            type="text"
+            name="theme_colors"
+            placeholder="Example: blush pink, gold, neutrals, safari theme, princess theme..."
+          />
+        </label>
+
+        <label>
+          Budget Range
+          <select name="budget_range">
+            <option value="">Select budget range</option>
+            <option>Under $500</option>
+            <option>$500–$1,000</option>
+            <option>$1,000–$2,500</option>
+            <option>$2,500–$5,000</option>
+            <option>$5,000+</option>
+            <option>Not sure yet</option>
+          </select>
+        </label>
+
+        <label>
+          Tell Us About Your Vision *
+          <textarea
+            name="message"
+            rows="7"
+            placeholder="Theme, colors, inspiration, must-haves, venue details, services needed, or anything else we should know."
+            required
+          ></textarea>
+        </label>
+
+        <button type="submit" class="button primary full">Submit Inquiry</button>
+
+        <p class="form-note">
+          We’ll review your inquiry and follow up soon at the email or phone number provided.
+        </p>
+      </form>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <div>
+      <strong>Alaia Maia Events</strong>
+      <p>Event styling, balloons, and beautifully curated celebrations.</p>
+    </div>
+
+    <div class="footer-links">
+      <a href="index.html#services">Services</a>
+      <a href="index.html#packages">Packages</a>
+      <a href="contact.html">Get a Quote</a>
+    </div>
+  </footer>
+</body>
+</html>
