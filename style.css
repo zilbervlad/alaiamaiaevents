@@ -734,3 +734,204 @@ textarea {
     padding: 24px;
   }
 }
+
+/* Luxury quote page */
+.quote-page {
+  background:
+    radial-gradient(circle at top left, rgba(247, 223, 220, 0.95), transparent 34%),
+    linear-gradient(180deg, #fffaf4, #ffffff 45%, #fff7ef);
+}
+
+.quote-top {
+  width: min(1120px, calc(100% - 36px));
+  margin: 62px auto 28px;
+  text-align: center;
+}
+
+.quote-top h1 {
+  margin: 0;
+  font-size: clamp(3rem, 7vw, 6.4rem);
+  line-height: 0.92;
+  letter-spacing: -0.06em;
+}
+
+.quote-top p {
+  max-width: 720px;
+  margin: 24px auto 0;
+  font-size: 1.08rem;
+}
+
+.luxury-quote-wrap {
+  width: min(1180px, calc(100% - 36px));
+  margin: 50px auto 90px;
+  display: grid;
+  grid-template-columns: 0.34fr 0.66fr;
+  gap: 24px;
+  align-items: start;
+}
+
+.luxury-contact-card {
+  padding: 34px;
+  border-radius: 0;
+  background: #f1ece4;
+  border: 1px solid rgba(47, 41, 40, 0.1);
+  position: sticky;
+  top: 115px;
+}
+
+.luxury-contact-card h2 {
+  margin: 0 0 26px;
+  font-size: 2.3rem;
+  font-weight: 400;
+  letter-spacing: -0.04em;
+}
+
+.luxury-contact-item {
+  padding: 18px 0;
+  border-top: 1px solid rgba(47, 41, 40, 0.16);
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.luxury-contact-item span {
+  display: block;
+  color: var(--gold);
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  font-size: 0.75rem;
+  font-weight: 800;
+  margin-bottom: 7px;
+}
+
+.luxury-contact-item strong {
+  color: var(--ink);
+  line-height: 1.55;
+}
+
+.luxury-contact-note {
+  margin-top: 26px;
+  font-size: 0.96rem;
+}
+
+.luxury-quote-form {
+  background: #050505;
+  color: #ffffff;
+  padding: clamp(28px, 5vw, 58px);
+  border-radius: 0;
+  box-shadow: 0 30px 80px rgba(0, 0, 0, 0.24);
+  display: grid;
+  gap: 16px;
+}
+
+.luxury-quote-form h2 {
+  margin: 0 0 20px;
+  color: #ffffff;
+  font-size: clamp(2.8rem, 6vw, 5.2rem);
+  line-height: 0.95;
+  font-weight: 400;
+  letter-spacing: -0.06em;
+}
+
+.luxury-form-section {
+  margin-top: 12px;
+  color: #d2ad6f;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 0.88rem;
+  font-weight: 800;
+}
+
+.luxury-form-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 14px;
+}
+
+.luxury-quote-form input,
+.luxury-quote-form select,
+.luxury-quote-form textarea {
+  width: 100%;
+  border: 0;
+  outline: none;
+  border-radius: 8px;
+  background: #f4f4f4;
+  color: #1f1f1f;
+  padding: 17px 18px;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+.luxury-quote-form textarea {
+  resize: vertical;
+}
+
+.luxury-quote-form input::placeholder,
+.luxury-quote-form textarea::placeholder {
+  color: #737373;
+}
+
+.luxury-checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 13px 22px;
+  margin: 4px 0 8px;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+.luxury-checkbox-grid label {
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  color: rgba(255, 255, 255, 0.88);
+  font-weight: 500;
+}
+
+.luxury-checkbox-grid input {
+  width: auto;
+  padding: 0;
+  accent-color: #d2ad6f;
+}
+
+.luxury-submit-btn {
+  margin-top: 10px;
+  border: 0;
+  min-height: 58px;
+  border-radius: 0;
+  background: linear-gradient(90deg, #d8bd89, #f2dfb7, #caa465);
+  color: #16110c;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  font-family: Georgia, "Times New Roman", serif;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+.luxury-submit-btn:hover {
+  filter: brightness(1.04);
+}
+
+.luxury-form-note {
+  margin: 4px 0 0;
+  color: rgba(255, 255, 255, 0.68);
+  text-align: center;
+  font-size: 0.92rem;
+}
+
+@media (max-width: 900px) {
+  .luxury-quote-wrap {
+    grid-template-columns: 1fr;
+  }
+
+  .luxury-contact-card {
+    position: static;
+  }
+
+  .luxury-form-row,
+  .luxury-checkbox-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .luxury-quote-form h2 {
+    font-size: 3rem;
+  }
+}
