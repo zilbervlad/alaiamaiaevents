@@ -1813,3 +1813,49 @@ textarea {
     font-size: 0.94rem;
   }
 }
+
+/* Instagram feed section */
+.instagram-section {
+  width: min(1120px, calc(100% - 44px));
+  margin: 0 auto 90px;
+}
+
+.instagram-inner {
+  text-align: center;
+  padding: 54px;
+  border-radius: 38px;
+  background: linear-gradient(135deg, rgba(247, 223, 220, 0.58), rgba(255, 255, 255, 0.82));
+  border: 1px solid rgba(47, 41, 40, 0.1);
+  box-shadow: 0 22px 55px rgba(68, 45, 39, 0.08);
+}
+
+.instagram-inner h2 {
+  margin: 0;
+  font-size: clamp(2.3rem, 5vw, 4.4rem);
+  line-height: 0.95;
+  letter-spacing: -0.055em;
+}
+
+.instagram-inner p {
+  max-width: 680px;
+  margin: 18px auto 0;
+}
+
+.instagram-feed {
+  margin-top: 34px;
+  overflow: hidden;
+}
+
+.lightwidget-widget {
+  min-height: 360px;
+}
+
+@media (max-width: 700px) {
+  .instagram-inner {
+    padding: 34px 22px;
+  }
+
+  .lightwidget-widget {
+    min-height: 520px;
+  }
+}
