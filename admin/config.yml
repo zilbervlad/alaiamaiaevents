@@ -1,10 +1,9 @@
 backend:
-  name: github
-  repo: zilbervlad/alaiamaiaevents
+  name: git-gateway
   branch: main
 
 media_folder: "images/gallery"
-public_folder: "images/gallery"
+public_folder: "/alaiamaiaevents/images/gallery"
 
 collections:
   - name: "gallery"
