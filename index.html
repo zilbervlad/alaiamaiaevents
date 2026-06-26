@@ -11,7 +11,7 @@
     content="Alaia Maia Events creates elegant event styling, balloon installations, backdrops, tablescapes, and celebration decor for private events, showers, birthdays, and private events."
   />
 
-  <link rel="stylesheet" href="style.css?v=15" />
+  <link rel="stylesheet" href="style.css?v=20" />
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
@@ -69,72 +69,11 @@
 
       <p>
         At Alaia Maia Events, we believe every event deserves thoughtful details and a warm,
-        elevated atmosphere. Whether you are planning a baby shower, shower, birthday, engagement, or private gathering, we help design the look, organize the details,
+        elevated atmosphere. Whether you are planning a baby shower, birthday, anniversary, graduation, or private gathering, we help design the look, organize the details,
         and create memorable moments your guests will love.
       </p>
     </section>
-
-    <section class="home-gallery section">
-      <div class="section-heading">
-        <div>
-          <div class="section-label">Portfolio</div>
-          <h2>Recent celebrations, beautifully styled.</h2>
-        </div>
-
-        <p>
-          A peek at our latest balloons, backdrops, tablescapes, and celebration details.
-        </p>
-      </div>
-
-      <div class="home-gallery-grid" id="homeGalleryGrid">
-        <p class="gallery-loading">Loading featured photos...</p>
-      </div>
-
-      <div class="home-gallery-action">
-        <a href="gallery.html" class="button primary dark">View Full Gallery</a>
-      </div>
-    </section>
-
-    <script>
-      async function loadHomeGallery() {
-        const grid = document.getElementById("homeGalleryGrid");
-        if (!grid) return;
-
-        try {
-          const response = await fetch("gallery-data.json?v=15");
-          const data = await response.json();
-          const photos = data.photos || [];
-
-          const featured = photos.filter((photo) => photo.featured);
-          const selected = (featured.length ? featured : photos).slice(0, 6);
-
-          if (!selected.length) {
-            grid.innerHTML = '<p class="gallery-loading">No featured photos yet.</p>';
-            return;
-          }
-
-          grid.innerHTML = selected.map((photo, index) => {
-            const src = photo.src || "";
-            const alt = photo.alt || "Alaia Maia Events portfolio photo";
-            const caption = photo.caption || "";
-
-            return `
-              <article class="home-gallery-card ${index === 0 ? "large" : ""}">
-                <img src="${src}" alt="${alt}" loading="lazy" />
-                ${caption ? `<p>${caption}</p>` : ""}
-              </article>
-            `;
-          }).join("");
-        } catch (error) {
-          grid.innerHTML = '<p class="gallery-loading">Featured photos could not load right now.</p>';
-          console.error(error);
-        }
-      }
-
-      loadHomeGallery();
-    </script>
-
-    <section id="services" class="section">
+<section id="services" class="section">
       <div class="section-heading">
         <div>
           <div class="section-label">What we do</div>
@@ -172,14 +111,14 @@
         <article class="service-card">
           <h3>Showers & Birthdays</h3>
           <p>
-            Baby showers, showers, first birthdays, milestone birthdays, and family celebrations.
+            Baby showers, birthdays, first birthdays, milestone moments, and family celebrations.
           </p>
         </article>
 
         <article class="service-card">
-          <h3>Engagements & Private Events</h3>
+          <h3>Private Events & Milestones</h3>
           <p>
-            Engagement parties, private events, private celebrations, and day-of decor support.
+            Private celebrations, anniversaries, graduations, corporate moments, and day-of decor support.
           </p>
         </article>
 
@@ -202,6 +141,16 @@
       </div>
     </section>
 
+    <section class="final-cta section">
+      <div>
+        <p class="eyebrow">Ready when you are</p>
+        <h2>Let’s make your celebration feel beautifully pulled together.</h2>
+        <p>Tell us what you’re planning and we’ll help shape the details, colors, setup, and styling.</p>
+      </div>
+
+      <a href="contact.html" class="button primary dark">Request a Quote</a>
+    </section>
+
   </main>
 
   <footer class="site-footer">
@@ -212,7 +161,9 @@
 
     <div class="footer-links">
       <a href="#services">Services</a>
-          </div>
+      <a href="gallery.html">Gallery</a>
+      <a href="contact.html">Get a Quote</a>
+    </div>
   </footer>
   <script>
     (function () {

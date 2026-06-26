@@ -37,7 +37,7 @@ collections:
                 name: "caption"
                 widget: "string"
                 required: false
-              - label: "Featured"
+              - label: "Show on Homepage"
                 name: "featured"
                 widget: "boolean"
                 required: false
