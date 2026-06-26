@@ -2885,3 +2885,185 @@ textarea {
     margin-top: 24px;
   }
 }
+
+
+/* Refined landing page sizing pass */
+.hero {
+  min-height: 560px;
+  margin-top: 34px;
+}
+
+.hero-content {
+  padding: 64px 54px;
+}
+
+.hero h1 {
+  font-size: clamp(2.65rem, 5.4vw, 5.2rem);
+  max-width: 860px;
+  letter-spacing: -0.045em;
+}
+
+.hero-text {
+  font-size: 1rem;
+  max-width: 580px;
+}
+
+.hero-card {
+  padding: 32px;
+}
+
+.hero-card-inner {
+  padding: 24px;
+  width: min(340px, 100%);
+}
+
+.hero-card-inner h2 {
+  font-size: 1.45rem;
+}
+
+/* Keep sections elegant, not billboard-sized */
+.section {
+  margin-top: 68px;
+}
+
+.intro h2,
+.section-heading h2,
+.contact-content h2 {
+  font-size: clamp(1.95rem, 3.2vw, 3.2rem);
+  letter-spacing: -0.035em;
+}
+
+.section-heading {
+  margin-bottom: 24px;
+}
+
+/* Landing photos: same size, neat, not massive */
+.home-gallery-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.home-gallery-card {
+  border-radius: 22px;
+  aspect-ratio: 4 / 3;
+  box-shadow: 0 12px 30px rgba(68, 45, 39, 0.09);
+}
+
+.home-gallery-card p {
+  left: 12px;
+  right: 12px;
+  bottom: 10px;
+  padding: 8px 11px;
+  font-size: 0.8rem;
+}
+
+/* Occasion pills: smaller and cleaner */
+.occasion-strip {
+  padding: 24px;
+  border-radius: 26px;
+}
+
+.occasion-pills {
+  gap: 9px;
+}
+
+.occasion-pills span {
+  padding: 9px 13px;
+  font-size: 0.84rem;
+  box-shadow: none;
+}
+
+/* Process cards: less chunky */
+.process-grid {
+  gap: 14px;
+}
+
+.process-card {
+  padding: 24px;
+  border-radius: 24px;
+}
+
+.process-card span {
+  width: 38px;
+  height: 38px;
+  margin-bottom: 16px;
+  font-size: 0.72rem;
+}
+
+.process-card h3 {
+  font-size: 1.25rem;
+}
+
+.process-card p {
+  font-size: 0.95rem;
+}
+
+/* Service cards: subtle motion only */
+.service-card:hover {
+  transform: translateY(-3px);
+}
+
+.service-card h3::before {
+  margin-bottom: 8px;
+}
+
+/* CTA: elegant, not enormous */
+.final-cta {
+  padding: 32px 36px;
+  border-radius: 30px;
+}
+
+.final-cta h2 {
+  font-size: clamp(1.9rem, 3.2vw, 3.25rem);
+  max-width: 720px;
+}
+
+.final-cta p:not(.eyebrow) {
+  font-size: 0.98rem;
+}
+
+/* Mobile refinement */
+@media (max-width: 880px) {
+  .hero {
+    min-height: auto;
+    grid-template-columns: 1fr;
+  }
+
+  .hero-content {
+    padding: 54px 28px 28px;
+  }
+
+  .hero h1 {
+    font-size: clamp(2.35rem, 12vw, 3.6rem);
+  }
+
+  .hero-card {
+    padding: 0 24px 28px;
+  }
+
+  .home-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
+  .home-gallery-card {
+    aspect-ratio: 1 / 1;
+  }
+
+  .process-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .final-cta {
+    padding: 28px;
+  }
+}
+
+@media (max-width: 560px) {
+  .home-gallery-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .home-gallery-card {
+    aspect-ratio: 4 / 3;
+  }
+}
