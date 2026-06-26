@@ -7,7 +7,7 @@
   <title>Gallery | Alaia Maia Events</title>
   <meta name="description" content="View the Alaia Maia Events gallery featuring balloons, backdrops, floral arches, and styled celebration details." />
 
-  <link rel="stylesheet" href="style.css?v=10" />
+  <link rel="stylesheet" href="style.css?v=11" />
 </head>
 
 <body class="gallery-page">
@@ -45,7 +45,7 @@
         const grid = document.getElementById("galleryGrid");
 
         try {
-          const response = await fetch("gallery-data.json?v=10");
+          const response = await fetch("gallery-data.json?v=11");
           const data = await response.json();
           const photos = data.photos || [];
 
