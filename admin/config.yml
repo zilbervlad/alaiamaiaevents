@@ -1,0 +1,25 @@
+backend:
+  name: github
+  repo: zilbervlad/alaiamaiaevents
+  branch: main
+
+media_folder: "images/gallery"
+public_folder: "images/gallery"
+
+collections:
+  - name: "gallery"
+    label: "Gallery"
+    files:
+      - name: "gallery_data"
+        label: "Gallery Photos"
+        file: "gallery-data.json"
+        fields:
+          - label: "Photos"
+            name: "photos"
+            widget: "list"
+            summary: "{{fields.alt}}"
+            fields:
+              - { label: "Image", name: "src", widget: "image" }
+              - { label: "Alt Text", name: "alt", widget: "string" }
+              - { label: "Caption", name: "caption", widget: "string", required: false }
+              - { label: "Featured", name: "featured", widget: "boolean", required: false, default: false }

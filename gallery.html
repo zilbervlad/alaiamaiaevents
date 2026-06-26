@@ -7,7 +7,7 @@
   <title>Gallery | Alaia Maia Events</title>
   <meta name="description" content="View the Alaia Maia Events gallery featuring balloons, backdrops, floral arches, and styled celebration details." />
 
-  <link rel="stylesheet" href="style.css?v=9" />
+  <link rel="stylesheet" href="style.css?v=10" />
 </head>
 
 <body class="gallery-page">
@@ -35,22 +35,45 @@
     </section>
 
     <section class="real-gallery-wrap">
-      <div class="real-gallery-grid">
-
-        <article class="real-gallery-card">
-          <img src="images/gallery/gallery-1.png" alt="Gallery 1" loading="lazy" />
-        </article>
-
-        <article class="real-gallery-card">
-          <img src="images/gallery/gallery-2.png" alt="Gallery 2" loading="lazy" />
-        </article>
-
-        <article class="real-gallery-card">
-          <img src="images/gallery/gallery-3.png" alt="Gallery 3" loading="lazy" />
-        </article>
-
+      <div class="real-gallery-grid" id="galleryGrid">
+        <p class="gallery-loading">Loading gallery...</p>
       </div>
     </section>
+
+    <script>
+      async function loadGallery() {
+        const grid = document.getElementById("galleryGrid");
+
+        try {
+          const response = await fetch("gallery-data.json?v=10");
+          const data = await response.json();
+          const photos = data.photos || [];
+
+          if (!photos.length) {
+            grid.innerHTML = '<p class="gallery-loading">No gallery photos yet.</p>';
+            return;
+          }
+
+          grid.innerHTML = photos.map((photo) => {
+            const src = photo.src || "";
+            const alt = photo.alt || "Alaia Maia Events gallery photo";
+            const caption = photo.caption || "";
+
+            return `
+              <article class="real-gallery-card">
+                <img src="${src}" alt="${alt}" loading="lazy" />
+                ${caption ? `<p class="gallery-caption">${caption}</p>` : ""}
+              </article>
+            `;
+          }).join("");
+        } catch (error) {
+          grid.innerHTML = '<p class="gallery-loading">Gallery could not load right now.</p>';
+          console.error(error);
+        }
+      }
+
+      loadGallery();
+    </script>
   </main>
 
   <footer class="site-footer">

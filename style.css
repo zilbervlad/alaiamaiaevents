@@ -2517,3 +2517,18 @@ textarea {
     max-width: 105px;
   }
 }
+
+
+.gallery-loading {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-family: Arial, Helvetica, sans-serif;
+  color: var(--muted);
+}
+
+.gallery-caption {
+  margin: 12px 0 0;
+  padding: 0 4px 4px;
+  font-size: 0.95rem;
+  text-align: center;
+}

@@ -1,0 +1,19 @@
+{
+  "photos": [
+    {
+      "src": "images/gallery/gallery-1.png",
+      "alt": "Alaia Maia Events gallery photo 1",
+      "caption": ""
+    },
+    {
+      "src": "images/gallery/gallery-2.png",
+      "alt": "Alaia Maia Events gallery photo 2",
+      "caption": ""
+    },
+    {
+      "src": "images/gallery/gallery-3.png",
+      "alt": "Alaia Maia Events gallery photo 3",
+      "caption": ""
+    }
+  ]
+}
