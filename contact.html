@@ -11,7 +11,7 @@
     content="Request a quote from Alaia Maia Events for event styling, custom balloons, backdrops, showers, birthdays, and private celebrations."
   />
 
-  <link rel="stylesheet" href="style.css?v=12" />
+  <link rel="stylesheet" href="style.css?v=13" />
   <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 
@@ -224,17 +224,25 @@
     </div>
   </footer>
   <script>
-    if (window.netlifyIdentity) {
-      window.netlifyIdentity.on("init", user => {
-        if (!user && window.location.hash) {
-          window.netlifyIdentity.open();
-        }
-      });
+    (function () {
+      var hash = window.location.hash || "";
+      var isIdentityToken =
+        hash.includes("invite_token") ||
+        hash.includes("confirmation_token") ||
+        hash.includes("recovery_token") ||
+        hash.includes("access_token");
 
-      window.netlifyIdentity.on("login", () => {
-        document.location.href = "/admin/";
-      });
-    }
+      if (isIdentityToken && !window.location.pathname.includes("/admin")) {
+        window.location.href = "/admin/" + hash;
+        return;
+      }
+
+      if (window.netlifyIdentity) {
+        window.netlifyIdentity.on("login", function () {
+          window.location.href = "/admin/";
+        });
+      }
+    })();
   </script>
 </body>
 </html>
