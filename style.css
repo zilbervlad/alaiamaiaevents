@@ -106,7 +106,7 @@ p {
   grid-template-columns: 1.08fr 0.92fr;
   background:
     linear-gradient(90deg, rgba(47, 41, 40, 0.76), rgba(47, 41, 40, 0.18)),
-    url("https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=1600&q=80");
+    url("images/gallery/gallery-1.png");
   background-size: cover;
   background-position: center;
   box-shadow: var(--shadow);
@@ -320,7 +320,7 @@ p {
   padding: 22px;
   background:
     linear-gradient(180deg, transparent, rgba(47, 41, 40, 0.65)),
-    url("https://images.unsplash.com/photo-1530103862676-de8c9debad1d?auto=format&fit=crop&w=900&q=80");
+    url("images/gallery/gallery-1.png");
   background-size: cover;
   background-position: center;
   box-shadow: var(--shadow);
@@ -330,25 +330,25 @@ p {
   grid-row: span 2;
   background-image:
     linear-gradient(180deg, transparent, rgba(47, 41, 40, 0.65)),
-    url("https://images.unsplash.com/photo-1464366400600-7168b8af9bc3?auto=format&fit=crop&w=1100&q=80");
+    url("images/gallery/gallery-1.png");
 }
 
 .gallery-tile:nth-child(3) {
   background-image:
     linear-gradient(180deg, transparent, rgba(47, 41, 40, 0.65)),
-    url("https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=900&q=80");
+    url("images/gallery/gallery-1.png");
 }
 
 .gallery-tile:nth-child(4) {
   background-image:
     linear-gradient(180deg, transparent, rgba(47, 41, 40, 0.65)),
-    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=900&q=80");
+    url("images/gallery/gallery-1.png");
 }
 
 .gallery-tile:nth-child(5) {
   background-image:
     linear-gradient(180deg, transparent, rgba(47, 41, 40, 0.65)),
-    url("https://images.unsplash.com/photo-1519671482749-fd09be7ccebf?auto=format&fit=crop&w=900&q=80");
+    url("images/gallery/gallery-1.png");
 }
 
 .gallery-tile span {
@@ -587,7 +587,7 @@ textarea {
   align-items: end;
   background:
     linear-gradient(135deg, rgba(47, 41, 40, 0.78), rgba(47, 41, 40, 0.22)),
-    url("https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1600&q=80");
+    url("images/gallery/gallery-1.png");
   background-size: cover;
   background-position: center;
   box-shadow: var(--shadow);
@@ -3065,5 +3065,113 @@ textarea {
 
   .home-gallery-card {
     aspect-ratio: 4 / 3;
+  }
+}
+
+
+/* Zoya-but-tasteful hero correction */
+.hero {
+  min-height: 520px;
+  grid-template-columns: 1fr 0.72fr;
+  background:
+    linear-gradient(90deg, rgba(47, 41, 40, 0.72), rgba(47, 41, 40, 0.18)),
+    url("images/gallery/gallery-1.png");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-content {
+  padding: 62px 54px;
+}
+
+.hero h1 {
+  max-width: 640px;
+  font-size: clamp(2.8rem, 5vw, 4.9rem);
+  line-height: 0.96;
+  letter-spacing: -0.045em;
+}
+
+.hero-text {
+  max-width: 560px;
+  font-size: 1rem;
+  margin-top: 22px;
+}
+
+.hero-actions {
+  margin-top: 28px;
+}
+
+.hero-card {
+  align-items: end;
+  padding: 30px;
+}
+
+.hero-card-inner {
+  width: min(315px, 100%);
+  padding: 22px;
+  border-radius: 24px;
+}
+
+.hero-card-inner h2 {
+  font-size: 1.35rem;
+}
+
+.hero-card-inner p {
+  font-size: 0.94rem;
+}
+
+/* Make the portfolio grid feel polished, not huge */
+.home-gallery-grid {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 14px;
+}
+
+.home-gallery-card {
+  aspect-ratio: 4 / 3;
+  border-radius: 22px;
+}
+
+/* Tighter section rhythm */
+.section {
+  margin-top: 64px;
+}
+
+.section-heading h2,
+.intro h2 {
+  font-size: clamp(1.85rem, 3vw, 3rem);
+}
+
+/* Mobile hero cleanup */
+@media (max-width: 880px) {
+  .hero {
+    grid-template-columns: 1fr;
+    min-height: auto;
+  }
+
+  .hero-content {
+    padding: 48px 26px 24px;
+  }
+
+  .hero h1 {
+    max-width: 100%;
+    font-size: clamp(2.3rem, 10vw, 3.4rem);
+  }
+
+  .hero-card {
+    padding: 0 24px 26px;
+  }
+
+  .hero-card-inner {
+    width: 100%;
+  }
+
+  .home-gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 560px) {
+  .home-gallery-grid {
+    grid-template-columns: 1fr;
   }
 }
